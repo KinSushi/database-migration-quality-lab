@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: database-migration-quality-postgres
+    environment:
+      POSTGRES_USER: migration
+      POSTGRES_PASSWORD: migration_local_only
+      POSTGRES_DB: migration_quality
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U migration -d migration_quality"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
