@@ -1,11 +1,6 @@
-# Screenshots
+# Screenshots and content previews
 
-Add after local execution:
+Generated from real repository validation commands in GitHub Actions.
 
-1. Docker PostgreSQL running.
-2. Validation CLI output.
-3. Reconciliation CLI output.
-4. Generated markdown report.
-5. CI passing.
-
-Screenshots must be sanitized.
+- [validation-preview.svg](screenshots/validation-preview.svg)
+- [validation-output.html](screenshots/validation-output.html)
