@@ -1,4 +1,4 @@
-﻿# database-migration-quality-lab
+# database-migration-quality-lab
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 **Legacy-to-target data migration lab with SQL validation, reconciliation and rollback documentation**
 
-PostgreSQL Â· SQL Â· Python Â· Data Quality Â· Migration Â· Reconciliation Â· Rollback
+PostgreSQL / SQL / Python / Data Quality / Migration / Reconciliation / Rollback
 
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Migration%20%2F%20Validation-003B57?style=flat)
@@ -32,6 +32,29 @@ legacy schema -> synthetic source data -> migration SQL -> target schema -> vali
 The project is designed for regulated and data-intensive environments: banks, insurers, health insurers, reinsurance, financial infrastructure, consulting, data-platform teams and legacy-to-modern transformation programs.
 
 No real banking, insurance, health, client, employer or private data belongs here.
+
+---
+
+## Validation evidence
+
+Generated validation artifacts are available in:
+
+- [docs/local_run_report.md](docs/local_run_report.md)
+- [docs/screenshots.md](docs/screenshots.md)
+- [docs/VALIDATION.md](docs/VALIDATION.md)
+
+Current public validation covers:
+
+```text
+pip install
+python -m compileall
+pytest
+ruff
+synthetic legacy data generation
+package import checks
+```
+
+The latest report shows `pytest`, `ruff`, synthetic legacy data generation and import checks passing.
 
 ---
 
@@ -98,24 +121,22 @@ make reset
 
 ```text
 database-migration-quality-lab/
-â”œâ”€â”€ README.md
-â”œâ”€â”€ PORTFOLIO.md
-â”œâ”€â”€ LICENSE
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ pyproject.toml
-â”œâ”€â”€ Makefile
-â”œâ”€â”€ docker-compose.yml
-â”œâ”€â”€ assets/
-â”‚   â””â”€â”€ database-migration-banner.svg
-â”œâ”€â”€ .github/workflows/ci.yml
-â”œâ”€â”€ data/
-â”œâ”€â”€ sql/
-â”œâ”€â”€ src/migration_quality/
-â”œâ”€â”€ tests/
-â”œâ”€â”€ docs/
-â”œâ”€â”€ reports/
-â””â”€â”€ output/
+|-- README.md
+|-- PORTFOLIO.md
+|-- LICENSE
+|-- .env.example
+|-- pyproject.toml
+|-- Makefile
+|-- docker-compose.yml
+|-- assets/
+|-- .github/workflows/
+|-- data/
+|-- sql/
+|-- src/migration_quality/
+|-- tests/
+|-- docs/
+|-- reports/
+`-- output/
 ```
 
 ---
@@ -133,6 +154,7 @@ database-migration-quality-lab/
 ## Portfolio signal
 
 This repository proves the ability to reason about legacy-to-target migration, SQL validation, reconciliation, rollback and documentation in regulated-data environments.
+
 ---
 
 ## Portfolio layer
@@ -144,4 +166,3 @@ This repository is part of the KinSushi public technical portfolio.
 | Data migration | legacy schema, target schema, migration SQL, validation, reconciliation, rollback |
 
 Detailed cross-repository context: [docs/PORTFOLIO_LAYER.md](docs/PORTFOLIO_LAYER.md)
-
