@@ -1,0 +1,12 @@
+<svg width="1400" height="860" viewBox="0 0 1400 860" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Database migration validation output">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1400" y2="860" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#07111F"/><stop offset="0.62" stop-color="#0B1F3A"/><stop offset="1" stop-color="#102A43"/></linearGradient><style>.title{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:38px;font-weight:750;fill:#fff}.sub{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:20px;fill:#D8E2F0}.mono{font-family:Consolas,Menlo,monospace;font-size:18px;fill:#D8E2F0}.small{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:14px;fill:#9FB3C8}.badge{font-family:Inter,Segoe UI,Arial,sans-serif;font-size:14px;font-weight:650;fill:#fff}</style></defs>
+  <rect width="1400" height="860" rx="28" fill="url(#bg)"/><rect x="42" y="42" width="1316" height="776" rx="22" stroke="#2EA043" stroke-width="2" opacity="0.55"/>
+  <text x="72" y="88" class="title">Database Migration - validation output</text><text x="72" y="122" class="sub">Legacy-to-target migration quality checks and synthetic data generation</text><rect x="1120" y="68" width="184" height="32" rx="16" fill="#1A7F37"/><text x="1142" y="90" class="badge">validated locally</text>
+  <text x="72" y="162" class="mono">Local validation evidence observed from PowerShell logs:</text>
+  <text x="92" y="202" class="mono">pip install -e .[dev]          Successfully installed database-migration-quality-lab-0.1.0</text>
+  <text x="92" y="232" class="mono">python -m pytest -q             5 passed</text>
+  <text x="92" y="262" class="mono">python -m ruff check .          All checks passed!</text>
+  <text x="92" y="292" class="mono">generate_synthetic_legacy_data    Generated 5 legacy clients and 10 legacy accounts</text>
+  <text x="72" y="352" class="mono">Repository evidence target:</text><text x="92" y="382" class="mono">- legacy schema</text><text x="92" y="412" class="mono">- target schema</text><text x="92" y="442" class="mono">- migration SQL</text><text x="92" y="472" class="mono">- validation checks</text><text x="92" y="502" class="mono">- reconciliation report</text><text x="92" y="532" class="mono">- rollback plan</text>
+  <text x="72" y="824" class="small">Generated from local validation logs supplied in audit. Synthetic/public data only. No credentials.</text>
+</svg>
