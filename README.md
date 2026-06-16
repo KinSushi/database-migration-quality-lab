@@ -14,7 +14,9 @@ PostgreSQL / SQL / Python / Data Quality / Migration / Reconciliation / Rollback
 ![SQL](https://img.shields.io/badge/SQL-Migration%20%2F%20Validation-003B57?style=flat)
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)
 ![Data Quality](https://img.shields.io/badge/Data%20Quality-Reconciliation-2EA043?style=flat)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+[![CI](https://github.com/KinSushi/database-migration-quality-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/KinSushi/database-migration-quality-lab/actions)
+![Tests](https://img.shields.io/badge/tests-pytest-0A9396)
+![Lint](https://img.shields.io/badge/lint-ruff-orange)
 ![Public Safety](https://img.shields.io/badge/Data-Synthetic%20Only-24292F?style=flat)
 
 </div>
@@ -55,6 +57,22 @@ package import checks
 ```
 
 The latest report shows `pytest`, `ruff`, synthetic legacy data generation and import checks passing.
+
+---
+
+## What a migration run produces (synthetic data)
+
+The pipeline migrates a legacy schema to a target schema and proves correctness with reconciliation, not assumptions:
+
+| Stage | Output |
+|---|---|
+| Legacy generation | synthetic source dataset with realistic anomalies |
+| Migration | target schema populated via documented SQL |
+| Validation | row counts, checksums and referential-integrity checks |
+| Reconciliation | source-vs-target deltas reported in `reports/` |
+| Rollback | documented reset/rollback path so the run is repeatable |
+
+Reproduce locally with the Quickstart commands. Every record is **synthetic**; no real database content is included.
 
 ---
 
