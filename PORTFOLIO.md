@@ -6,6 +6,18 @@ Synthetic legacy-to-target data migration lab demonstrating SQL schema design, m
 
 ---
 
+## Recruiter-readable positioning
+
+This project is public technical evidence for Data Engineering, DataOps, Application & Data Support, Data Quality and regulated-data migration roles.
+
+It demonstrates the ability to build and operate a small but complete legacy-to-target migration loop:
+
+```text
+legacy schema -> synthetic source data -> migration SQL -> target schema -> validation checks -> reconciliation report -> rollback plan
+```
+
+---
+
 ## What this repo proves
 
 | Evidence | Technical signal |
@@ -46,6 +58,16 @@ Synthetic legacy-to-target data migration lab demonstrating SQL schema design, m
 ### Production support
 
 > I include rollback procedures, incident notes and public-safety boundaries.
+
+---
+
+## What this repo is not
+
+- Not production infrastructure or a real migration of real systems.
+- Not real bank, insurance, health, client or employer data.
+- Not a production migration claim.
+- Not investment, credit, insurance or health advice.
+- Not application material.
 
 ---
 
